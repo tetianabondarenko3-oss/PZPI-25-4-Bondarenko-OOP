@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ProductEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProductEditForm.Designer.cs">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="SupplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SupplyForm.Designer.cs">
+      <DependentUpon>SupplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="SaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SaleForm.Designer.cs">
+      <DependentUpon>SaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="CorrectionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CorrectionsForm.Designer.cs">
+      <DependentUpon>CorrectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="InventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InventoryForm.Designer.cs">
+      <DependentUpon>InventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="ReturnsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReturnsForm.Designer.cs">
+      <DependentUpon>ReturnsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UsersForm.Designer.cs">
+      <DependentUpon>UsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
