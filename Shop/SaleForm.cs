@@ -1,9 +1,9 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace shop;
 
 /// <summary>
-/// Форма для оформлення покупок, друку чеків і коригування залишків.
+/// Форма для оформлення покупок, збереження чеків і коригування залишків.
 /// </summary>
 public sealed partial class SaleForm : Form
 {
@@ -81,9 +81,30 @@ public sealed partial class SaleForm : Form
         }
     }
 
+    private void SaveReceiptButton_Click(object? sender, EventArgs e)
+    {
+        if (string.IsNullOrWhiteSpace(receiptTextBox.Text))
+        {
+            MessageBox.Show("Спочатку оформіть чек.", "Збереження чека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
+        }
+
+        using var dialog = new SaveFileDialog
+        {
+            Filter = "Текстовий файл (*.txt)|*.txt",
+            FileName = $"receipt-{DateTime.Now:yyyy-MM-dd-HHmmss}.txt",
+            Title = "Зберегти чек"
+        };
+
+        if (dialog.ShowDialog(this) == DialogResult.OK)
+        {
+            File.WriteAllText(dialog.FileName, receiptTextBox.Text);
+            MessageBox.Show("Чек збережено.", "Збереження чека", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+    }
+
     private void UpdateTotal()
     {
         totalLabel.Text = $"Загальна сума чека: {cart.Sum(item => item.Total):0.00} грн";
     }
 }
-

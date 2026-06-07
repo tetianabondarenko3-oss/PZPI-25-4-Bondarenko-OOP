@@ -8,6 +8,7 @@ partial class SaleForm
     private Button addButton = null!;
     private Button removeButton = null!;
     private Button completeButton = null!;
+    private Button saveReceiptButton = null!;
     private DataGridView cartGridView = null!;
     private TextBox receiptTextBox = null!;
     private Label totalLabel = null!;
@@ -24,6 +25,7 @@ partial class SaleForm
         addButton = new Button();
         removeButton = new Button();
         completeButton = new Button();
+        saveReceiptButton = new Button();
         cartGridView = new DataGridView();
         receiptTextBox = new TextBox();
         totalLabel = new Label();
@@ -48,6 +50,7 @@ partial class SaleForm
         topPanel.Controls.Add(addButton);
         topPanel.Controls.Add(removeButton);
         topPanel.Controls.Add(completeButton);
+        topPanel.Controls.Add(saveReceiptButton);
 
         productLabel.AutoSize = true;
         productLabel.Location = new Point(12, 17);
@@ -83,10 +86,15 @@ partial class SaleForm
         removeButton.Text = "Прибрати";
         removeButton.Click += RemoveButton_Click;
 
-        completeButton.Location = new Point(917, 11);
-        completeButton.Size = new Size(120, 31);
+        completeButton.Location = new Point(912, 11);
+        completeButton.Size = new Size(110, 31);
         completeButton.Text = "Оформити";
         completeButton.Click += CompleteButton_Click;
+
+        saveReceiptButton.Location = new Point(1028, 11);
+        saveReceiptButton.Size = new Size(120, 31);
+        saveReceiptButton.Text = "Зберегти чек";
+        saveReceiptButton.Click += SaveReceiptButton_Click;
 
         receiptTextBox.Dock = DockStyle.Right;
         receiptTextBox.Font = new Font("Consolas", 10F);
